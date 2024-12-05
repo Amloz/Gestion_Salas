@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Salas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Administración de Salas y Reservas</h1>
+
+  <!-- Formulario para agregar salas -->
+  <section>
+    <h2>Agregar Sala</h2>
+    <form id="salaForm">
+      <label for="nombreSala">Nombre de la Sala:</label>
+      <input type="text" id="nombreSala" required>
+      <label for="capacidadSala">Capacidad:</label>
+      <input type="number" id="capacidadSala" required>
+      <label for="estadoSala">Estado:</label>
+      <select id="estadoSala">
+        <option value="activo">Activo</option>
+        <option value="inactivo">Inactivo</option>
+      </select>
+      <button type="submit">Agregar Sala</button>
+    </form>
+  </section>
+
+  <!-- Tabla de salas -->
+  <section>
+    <h2>Salas Disponibles</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Capacidad</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaSalas">
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Formulario para agregar reservas -->
+  <section>
+    <h2>Agregar Reserva</h2>
+    <form id="reservaForm">
+      <label for="salaReserva">Sala:</label>
+      <select id="salaReserva"></select>
+      <label for="nombreReservante">Nombre del Reservante:</label>
+      <input type="text" id="nombreReservante" required>
+      <label for="inicioReserva">Inicio (Fecha y Hora):</label>
+      <input type="datetime-local" id="inicioReserva" required>
+      <label for="finReserva">Fin (Fecha y Hora):</label>
+      <input type="datetime-local" id="finReserva" required>
+      <button type="submit">Agregar Reserva</button>
+    </form>
+  </section>
+
+  <!-- Lista de reservas -->
+  <section>
+    <h2>Reservas</h2>
+    <ul id="listaReservas">
+      <!-- Reservas con botones Editar y Eliminar -->
+    </ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
